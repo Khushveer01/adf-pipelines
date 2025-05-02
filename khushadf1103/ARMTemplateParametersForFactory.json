@@ -8,6 +8,9 @@
 		"ADLSGen2_accountKey": {
 			"value": ""
 		},
+		"ADLSTripData_accountKey": {
+			"value": ""
+		},
 		"AdvWorksDb_password": {
 			"value": ""
 		},
@@ -26,14 +29,14 @@
 		"TaxiTripDb_password": {
 			"value": ""
 		},
-		"ADLSTripData_accountKey": {
-			"value": ""
-		},
 		"TripAggregateBlob_connectionString": {
 			"value": ""
 		},
 		"ADLSGen2_properties_typeProperties_url": {
 			"value": "https://khush1103.dfs.core.windows.net/"
+		},
+		"ADLSTripData_properties_typeProperties_url": {
+			"value": "https://khush2003.dfs.core.windows.net/"
 		},
 		"AdvWorksDb_properties_typeProperties_server": {
 			"value": "khush1103.database.windows.net"
@@ -61,9 +64,6 @@
 		},
 		"TaxiTripDb_properties_typeProperties_userName": {
 			"value": "khushveer"
-		},
-		"ADLSTripData_properties_typeProperties_url": {
-			"value": "https://khush2003.dfs.core.windows.net/"
 		}
 	}
 }

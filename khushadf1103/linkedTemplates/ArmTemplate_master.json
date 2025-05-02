@@ -43,6 +43,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'TripAggregateBlob'"
 		},
+		"FlipKartBlob_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'FlipKartBlob'"
+		},
 		"ADLSGen2_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://khush1103.dfs.core.windows.net/"
@@ -140,6 +144,9 @@
 					},
 					"TripAggregateBlob_connectionString": {
 						"value": "[parameters('TripAggregateBlob_connectionString')]"
+					},
+					"FlipKartBlob_connectionString": {
+						"value": "[parameters('FlipKartBlob_connectionString')]"
 					},
 					"ADLSGen2_properties_typeProperties_url": {
 						"value": "[parameters('ADLSGen2_properties_typeProperties_url')]"

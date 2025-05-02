@@ -29,6 +29,9 @@
 		"ADLSTripData_accountKey": {
 			"value": ""
 		},
+		"TripAggregateBlob_connectionString": {
+			"value": ""
+		},
 		"ADLSGen2_properties_typeProperties_url": {
 			"value": "https://khush1103.dfs.core.windows.net/"
 		},

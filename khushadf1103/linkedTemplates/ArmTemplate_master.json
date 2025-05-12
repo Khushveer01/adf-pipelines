@@ -31,6 +31,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'BlobStorageProducts'"
 		},
+		"FlipKartBlob_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'FlipKartBlob'"
+		},
 		"ProductBlobStorage_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ProductBlobStorage'"
@@ -43,9 +47,9 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'TripAggregateBlob'"
 		},
-		"FlipKartBlob_connectionString": {
+		"Lookup_connectionString": {
 			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'FlipKartBlob'"
+			"metadata": "Secure string for 'connectionString' of 'Lookup'"
 		},
 		"ADLSGen2_properties_typeProperties_url": {
 			"type": "string",
@@ -136,6 +140,9 @@
 					"BlobStorageProducts_connectionString": {
 						"value": "[parameters('BlobStorageProducts_connectionString')]"
 					},
+					"FlipKartBlob_connectionString": {
+						"value": "[parameters('FlipKartBlob_connectionString')]"
+					},
 					"ProductBlobStorage_connectionString": {
 						"value": "[parameters('ProductBlobStorage_connectionString')]"
 					},
@@ -145,8 +152,8 @@
 					"TripAggregateBlob_connectionString": {
 						"value": "[parameters('TripAggregateBlob_connectionString')]"
 					},
-					"FlipKartBlob_connectionString": {
-						"value": "[parameters('FlipKartBlob_connectionString')]"
+					"Lookup_connectionString": {
+						"value": "[parameters('Lookup_connectionString')]"
 					},
 					"ADLSGen2_properties_typeProperties_url": {
 						"value": "[parameters('ADLSGen2_properties_typeProperties_url')]"
@@ -203,6 +210,26 @@
 			},
 			"dependsOn": [
 				"[resourceId('Microsoft.Resources/deployments', 'khushadf1103_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "khushadf1103_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'khushadf1103_ArmTemplate_1')]"
 			]
 		}
 	]
